@@ -3,10 +3,11 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 
 	"YearEndProject/crawler/config"
-	Crawler "YearEndProject/crawler/func"
 	"YearEndProject/crawler/model"
+	"YearEndProject/crawler/service"
 
 	_ "github.com/go-sql-driver/mysql"
 	//"github.com/golang/goProject/model"
@@ -25,8 +26,18 @@ func main() {
 	model.DB.Init()
 	defer model.DB.Close()
 
+	// init request information
+	model.Request.Init()
+
+	fmt.Println(model.Request)
+	fmt.Println("hello")
+
+	resp, _ := service.GetHtml("2019214228", "2020", "1")
+	body, _ := ioutil.ReadAll(resp.Body)
+	fmt.Println(resp)
+	fmt.Println(string(body))
 	// 待修改
-	var mession = 24
+	/*var mession = 24
 	var ch = make(chan int, 13)
 	var missionMap = map[int]int{
 		1:  2019214227,
@@ -119,5 +130,5 @@ func main() {
 			}
 		}
 	}
-	fmt.Println("All Finished")
+	fmt.Println("All Finished")*/
 }

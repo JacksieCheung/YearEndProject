@@ -1,4 +1,4 @@
-package Crawler
+package back
 
 import (
 	"YearEndProject/crawler/model"
@@ -13,14 +13,13 @@ import (
 )
 
 func Get(db *gorm.DB, stuNum int, Month int) {
-	strNum := strconv.Itoa(stuNum)
-	strMonth := strconv.Itoa(Month)
 	var err error
 	var reg, reg2, reg3, reg4 *regexp.Regexp
 	var body []byte
 	var strBody string
 	var res *http.Response
 	var req *http.Request
+
 	//爬虫处理
 	fmt.Println(strNum + " " + strMonth)
 	for {
