@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	// "io/ioutil"
 
 	"YearEndProject/crawler/config"
 	"YearEndProject/crawler/model"
@@ -33,9 +33,7 @@ func main() {
 	fmt.Println("hello")
 
 	resp, _ := service.GetHtml("2019214228", "2020", "1")
-	body, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println(resp)
-	fmt.Println(string(body))
+	service.GetInfo(resp)
 	// 待修改
 	/*var mession = 24
 	var ch = make(chan int, 13)

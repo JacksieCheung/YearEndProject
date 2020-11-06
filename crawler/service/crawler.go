@@ -1,9 +1,11 @@
 package service
 
 import (
-	//"fmt"
+	"fmt"
 	"net/http"
 	//"strconv"
+	"io/ioutil"
+	"regexp"
 	"strings"
 
 	"YearEndProject/crawler/log"
@@ -54,6 +56,33 @@ func GetHtml(stuId, year, month string) (*http.Response, error) {
 	}
 
 	return res, nil
+}
+
+// 解析响应体和正则表达式匹配
+func GetInfo(resp *http.Response) {
+	body, _ := ioutil.ReadAll(resp.Body)
+	resp.Body.Close()
+	strBody := string(body)
+
+	reg := regexp.MustCompile(`<a  class=\"w\"><h2>时间：(.*?)</h2><span>消费：.*?</span><span>地点：后勤集团/饮食中心/[\p{Han}]+</span>|<a  class=\"w\"><h2>时间：(.*?)</h2><span>消费：.*?</span><span>地点：后勤集团/商贸中心/[\p{Han}]+</span>`)
+	result := reg.FindAllString(strBody, -1)
+	/*if len(result) == 0 { //判断是否为有效学号，不是就跳过
+		fmt.Println("No Data")
+		return
+	}*/
+
+	/*reg2 := regexp.MustCompile("<span>消费：(.*?)元，</span><span>地点：后勤集团/饮食中心/.*?</span>|<span>消费：(.*?)元，</span><span>地点：后勤集团/商贸中心/.*?</span>")
+	result2 := reg2.FindAllStringSubmatch(strBody, -1)
+
+	reg3 := regexp.MustCompile("<span>地点：后勤集团/饮食中心/(.*?)/.*?</span>|<span>地点：后勤集团/商贸中心/.*?/(.*?)</span>")
+	result3 := reg3.FindAllStringSubmatch(strBody, -1)
+
+	reg4 := regexp.MustCompile("<span>地点：后勤集团/饮食中心/.*?/.*?/(.*?)</span>|<span>地点：后勤集团/商贸中心/(.*?)/.*?</span>|<span>地点：后勤集团/饮食中心/学子中西餐厅/(.*?)</span>|<span>地点：后勤集团/饮食中心/冷库中心/(.*?)</span>")
+
+	result4 := reg4.FindAllStringSubmatch(strBody, -1)*/
+
+	//检查数据是否正确，错误直接停掉，避免存入错误信息
+	fmt.Println(result)
 }
 
 /*func Crawler(stuId, year, month string) {
