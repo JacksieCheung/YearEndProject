@@ -4,34 +4,21 @@ import (
 	"github.com/spf13/viper"
 )
 
+// Request ... 全局请求变量
 var Request *RequestInfo
 
+// RequestInfo ... 请求结构
 type RequestInfo struct {
-	Url            string
-	Cookie         string
-	UserAgent      string
-	ContentType    string
-	Accept         string
-	Host           string
-	AcceptEncoding string
-	Connection     string
-	CacheControl   string
-	ContentLength  string
-	PostmanToken   string
+	URL         string
+	Cookie      string
+	ContentType string
 }
 
+// Init ... 初始化请求
 func (request *RequestInfo) Init() {
 	Request = &RequestInfo{
-		Url:            viper.GetString("web.url"),
-		Cookie:         viper.GetString("web.cookie"),
-		UserAgent:      viper.GetString("web.user_agent"),
-		ContentType:    viper.GetString("web.content_type"),
-		Accept:         "*/*",
-		Host:           viper.GetString("web.host"),
-		AcceptEncoding: viper.GetString("web.accept_encoding"),
-		Connection:     viper.GetString("web.connection"),
-		CacheControl:   viper.GetString("web.cache_control"),
-		ContentLength:  viper.GetString("web.content_length"),
-		PostmanToken:   viper.GetString("web.postman_token"),
+		URL:         viper.GetString("web.url"),
+		Cookie:      viper.GetString("web.cookie"),
+		ContentType: viper.GetString("web.content_type"),
 	}
 }

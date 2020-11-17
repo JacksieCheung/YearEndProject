@@ -3,6 +3,7 @@ package service
 import (
 	"fmt"
 	"net/http"
+
 	//"strconv"
 	"io/ioutil"
 	"regexp"
@@ -15,14 +16,14 @@ import (
 	"go.uber.org/zap"
 )
 
-// 获取 html 源码
-func GetHtml(stuId, year, month string) (*http.Response, error) {
+// GetHTML ... 获取 html 源码
+func GetHTML(stuID, year, month string) (*http.Response, error) {
 	var build strings.Builder
 
 	// url
-	url := model.Request.Url
+	url := model.Request.URL
 	build.WriteString(url)
-	build.WriteString(stuId)
+	build.WriteString(stuID)
 	url = build.String()
 	build.Reset()
 
@@ -36,17 +37,8 @@ func GetHtml(stuId, year, month string) (*http.Response, error) {
 
 	req, _ := http.NewRequest("POST", url, payload)
 
-	req.Header.Add("Cookie", model.Request.Cookie)
-	req.Header.Add("User-Agent", model.Request.UserAgent)
-	req.Header.Add("Content-Type", model.Request.ContentType)
-	req.Header.Add("Accept", model.Request.Accept)
-	req.Header.Add("Cache-Control", model.Request.CacheControl)
-	req.Header.Add("Postman-Token", model.Request.PostmanToken)
-	req.Header.Add("Host", model.Request.Host)
-	req.Header.Add("Accept-Encoding", model.Request.AcceptEncoding)
-	req.Header.Add("Content-Length", model.Request.ContentLength)
-	req.Header.Add("Connection", model.Request.Connection)
-	req.Header.Add("cache-control", model.Request.CacheControl)
+	req.Header.Set("Cookie", model.Request.Cookie)
+	req.Header.Set("Content-Type", model.Request.ContentType)
 
 	res, err := http.DefaultClient.Do(req)
 	if err != nil {
@@ -58,31 +50,48 @@ func GetHtml(stuId, year, month string) (*http.Response, error) {
 	return res, nil
 }
 
-// 解析响应体和正则表达式匹配
-func GetInfo(resp *http.Response) {
+// GetInfo ... 解析响应体和正则表达式匹配
+func GetInfo(resp *http.Response, stuID string) {
 	body, _ := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	strBody := string(body)
+	//fmt.Println(strBody)
 
-	reg := regexp.MustCompile(`<a  class=\"w\"><h2>时间：(.*?)</h2><span>消费：.*?</span><span>地点：后勤集团/饮食中心/[\p{Han}]+</span>|<a  class=\"w\"><h2>时间：(.*?)</h2><span>消费：.*?</span><span>地点：后勤集团/商贸中心/[\p{Han}]+</span>`)
-	result := reg.FindAllString(strBody, -1)
-	/*if len(result) == 0 { //判断是否为有效学号，不是就跳过
-		fmt.Println("No Data")
-		return
-	}*/
+	reg := regexp.MustCompile("<a  class=\"w\"><h2>时间：(.*?) (.*?)</h2><span>消费：(.*?)元，</span><span>地点：后勤集团/饮食中心/(.*?)/.*?/(.*?)  </span>")
+	result := reg.FindAllStringSubmatch(strBody, -1)
 
-	/*reg2 := regexp.MustCompile("<span>消费：(.*?)元，</span><span>地点：后勤集团/饮食中心/.*?</span>|<span>消费：(.*?)元，</span><span>地点：后勤集团/商贸中心/.*?</span>")
-	result2 := reg2.FindAllStringSubmatch(strBody, -1)
+	reg = regexp.MustCompile("<a  class=\"w\"><h2>时间：(.*?) (.*?)</h2><span>消费：(.*?)元，</span><span>地点：后勤集团/商贸中心/(.*?)/(.*?)  </span>")
+	result2 := reg.FindAllStringSubmatch(strBody, -1)
 
-	reg3 := regexp.MustCompile("<span>地点：后勤集团/饮食中心/(.*?)/.*?</span>|<span>地点：后勤集团/商贸中心/.*?/(.*?)</span>")
-	result3 := reg3.FindAllStringSubmatch(strBody, -1)
-
-	reg4 := regexp.MustCompile("<span>地点：后勤集团/饮食中心/.*?/.*?/(.*?)</span>|<span>地点：后勤集团/商贸中心/(.*?)/.*?</span>|<span>地点：后勤集团/饮食中心/学子中西餐厅/(.*?)</span>|<span>地点：后勤集团/饮食中心/冷库中心/(.*?)</span>")
-
-	result4 := reg4.FindAllStringSubmatch(strBody, -1)*/
+	/*
+		reg4 := regexp.MustCompile("<span>地点：后勤集团/饮食中心/.*?/.*?/(.*?)</span>|<span>地点：后勤集团/商贸中心/(.*?)/.*?</span>|<span>地点：后勤集团/饮食中心/学子中西餐厅/(.*?)</span>|<span>地点：后勤集团/饮食中心/冷库中心/(.*?)</span>")
+		result4 := reg4.FindAllStringSubmatch(strBody, -1)
+	*/
 
 	//检查数据是否正确，错误直接停掉，避免存入错误信息
-	fmt.Println(result)
+	result = append(result, result2...)
+	fmt.Println(len(result))
+	if len(result) == 0 {
+		log.Fatal("wrong")
+	}
+
+	var data []model.StudentsModel
+
+	for i := 0; i < len(result); i++ {
+		if len(result[i]) != 6 {
+			log.Fatal("wrong")
+		}
+		data = append(data, model.StudentsModel{
+			StuID:      stuID,
+			Date:       result[i][1],
+			Time:       result[i][2],
+			Cost:       result[i][3],
+			Restaurant: result[i][4],
+			Place:      result[i][5],
+		})
+
+	}
+	fmt.Println(model.DB.Self.Create(data).Error)
 }
 
 /*func Crawler(stuId, year, month string) {

@@ -1,50 +1,21 @@
-//存储学生信息数据库的模型
 package model
 
-import (
-    _"github.com/go-sql-driver/mysql"
-)
-
-type Data struct {
-    Stunum string `gorm:"type:char(10);not null;index:stunum"`
-    Time string `gorm:"type:varchar(20);not null;"`
-    Cost string `gorm:"type:varhchar(8);not null;"`
-    Restaurant string `gorm:"type:varchar(30);not null;"`
-    Place string `gorm:"type:varchar(30);not null;"`
+// StudentsModel main table
+type StudentsModel struct {
+	// ID         uint32 `gorm:"column:id"`
+	StuID      string `gorm:"column:stu_id"`
+	Date       string `gorm:"column:date"`
+	Time       string `gorm:"column:time"`
+	Cost       string `gorm:"column:cost"`
+	Restaurant string `gorm:"column:restaurant"`
+	Place      string `gorm:"column:place"`
 }
 
-type Stunum2018 struct {
-    Stunum string `gorm:"type:char(10);not null primary key;"`
+func (u *StudentsModel) TableName() string {
+	return "students"
 }
 
-type Stuinfos struct {
-    Stunum string `gorm:"type:char(10);not null;index:stunum"`
-    Time string `gorm:"type:varchar(20);not null;"`
-    Cost string `gorm:"type:varhchar(8);not null;"`
-    Restaurant string `gorm:"type:varchar(30);not null;"`
-    Place string `gorm:"type:varchar(30);not null;"`
-}
-
-type Data2018 struct {
-    Stunum string `gorm:"type:char(10);not null;index:stunum"`
-    Time string `gorm:"type:varchar(20);not null;"`
-    Cost string `gorm:"type:varhchar(8);not null;"`
-    Restaurant string `gorm:"type:varchar(30);not null;"`
-    Place string `gorm:"type:varchar(30);not null;"`
-}
-
-type Stunum2017 struct {
-    Stunum string `gorm:"type:char(10);not null primary key;"`
-}
-
-type Stunum2016 struct {
-    Stunum string `gorm:"type:char(10);not null primary key;"`
-}
-
-type Data2017 struct {
-    Stunum string `gorm:"type:char(10);not null;index:stunum"`
-    Time string `gorm:"type:varchar(20);not null;"`
-    Cost string `gorm:"type:varhchar(8);not null;"`
-    Restaurant string `gorm:"type:varchar(30);not null;"`
-    Place string `gorm:"type:varchar(30);not null;"`
+// Create ... create table
+func (u *StudentsModel) Create() error {
+	return DB.Self.Create(&u).Error
 }

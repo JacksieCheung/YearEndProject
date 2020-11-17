@@ -2,7 +2,7 @@
 package main
 
 import (
-	"fmt"
+
 	// "io/ioutil"
 
 	"YearEndProject/crawler/config"
@@ -29,11 +29,12 @@ func main() {
 	// init request information
 	model.Request.Init()
 
-	fmt.Println(model.Request)
-	fmt.Println("hello")
+	resp, _ := service.GetHTML("2019214228", "2020", "1")
 
-	resp, _ := service.GetHtml("2019214228", "2020", "1")
-	service.GetInfo(resp)
+	// fmt.Println(resp.Body)
+
+	service.GetInfo(resp, "2019214228")
+
 	// 待修改
 	/*var mession = 24
 	var ch = make(chan int, 13)
