@@ -8,6 +8,7 @@ import (
 	"YearEndProject/crawler/config"
 	"YearEndProject/crawler/model"
 	"YearEndProject/crawler/service"
+	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
 	//"github.com/golang/goProject/model"
@@ -29,11 +30,13 @@ func main() {
 	// init request information
 	model.Request.Init()
 
-	resp, _ := service.GetHTML("2019214228", "2020", "1")
-
+	res, err := service.GetHTML("2019214228", "2020", "1")
+	fmt.Println(err)
+	err = service.InsertDataBase("2019214228", res)
+	fmt.Println(err)
 	// fmt.Println(resp.Body)
 
-	service.GetInfo(resp, "2019214228")
+	// service.GetInfo(resp, "2019214228")
 
 	// 待修改
 	/*var mession = 24
