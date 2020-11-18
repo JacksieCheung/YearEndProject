@@ -15,6 +15,7 @@ import (
 	"YearEndProject/crawler/model"
 
 	//"github.com/spf13/viper"
+	"github.com/JacksieCheung/YearEndProject/crawler/pkg/errno"
 	"go.uber.org/zap"
 )
 
@@ -50,7 +51,7 @@ func GetHTML(stuID, year, month string) ([][]string, error) {
 	}
 
 	result, err := GetInfo(res)
-	fmt.Println(result)
+	// fmt.Println(result)
 	if err != nil {
 		return nil, err
 	}
@@ -74,7 +75,7 @@ func GetInfo(resp *http.Response) ([][]string, error) {
 	result = append(result, result2...)
 	// fmt.Println(len(result))
 	if len(result) == 0 {
-		return nil, errors.New("result was empty")
+		return nil, errno.ErrNORESULT
 	}
 
 	return result, nil
@@ -104,20 +105,19 @@ func InsertDataBase(stuID string, result [][]string) error {
 // Handler concurrency handler
 func Handler() {
 	// config init
-	months := []int{1, 9, 10, 11}
-	year := "2020"  // TODO:get from config
-	stuIDMax := "0" // TODO:get from config
-	stuIDMin := "0" // TODO:get from config
+	months := []int{1, 8, 9, 10, 11}
 
-	stuIDEnd, _ := strconv.Atoi(stuIDMax)
-	stuIDStart, _ := strconv.Atoi(stuIDMin)
-	mission := (stuIDEnd - stuIDStart) * len(months)
+	stuIDEnd, _ := strconv.Atoi(model.Stu.StuIDMax)
+	stuIDStart, _ := strconv.Atoi(model.Stu.StuIDMin)
+	mission := (stuIDEnd - stuIDStart + 1) * len(months)
 
 	// channels init
 	ErrChannel := make(chan model.ErrorMsg, len(months)+1) // 错误管道，database 和 crawler 共用
 	ResChannel := make(chan model.RespMsg, len(months)*2)  // 结果管道， crawler 和 database 通信
 	IndChannel := make(chan model.IndexMsg, len(months)*2) // 结果管道， crawler 专用，用于开启 crawler 迭代
+	MissionChannel := make(chan int, len(months))          // mission-- 管道
 
+	fmt.Println("missions: ", mission, " start")
 	// goroutine init
 	for _, v := range months {
 		go func(stuID, month, year string) {
@@ -134,20 +134,25 @@ func Handler() {
 
 			ResChannel <- model.RespMsg{
 				StuID:  stuID,
+				Month:  month,
 				Result: result,
 			}
 			IndChannel <- model.IndexMsg{
 				Month: month,
 				StuID: stuID,
 			}
+			log.Info("GetHTML succeeded",
+				zap.String("stuID:", stuID),
+				zap.String("month:", month))
 			return
-		}(stuIDMin, strconv.Itoa(v), year)
+		}(model.Stu.StuIDMin, strconv.Itoa(v), model.Stu.Year)
 	}
 
 	// handler
 	for mission > 0 {
 		select {
-		case msg := <-IndChannel:
+
+		case msg := <-IndChannel: // 开启下一个 GetHTML
 			stuID, _ := strconv.Atoi(msg.StuID)
 			if stuID < stuIDEnd {
 				stuID++
@@ -165,19 +170,22 @@ func Handler() {
 
 					ResChannel <- model.RespMsg{
 						StuID:  stuID,
+						Month:  month,
 						Result: result,
 					}
 					IndChannel <- model.IndexMsg{
 						Month: month,
 						StuID: stuID,
 					}
-					mission--
+					log.Info("GetHTML succeeded",
+						zap.String("stuID:", stuID),
+						zap.String("month:", month))
 					return
-				}(strconv.Itoa(stuID), msg.Month, year)
+				}(strconv.Itoa(stuID), msg.Month, model.Stu.Year)
 			}
 
-		case msg := <-ResChannel:
-			go func(stuID string, result [][]string) {
+		case msg := <-ResChannel: // 开启 InsertDataBase
+			go func(stuID string, month string, result [][]string) {
 				err := InsertDataBase(stuID, result)
 				if err != nil {
 					ErrChannel <- model.ErrorMsg{
@@ -185,27 +193,54 @@ func Handler() {
 						ChannelIndex: "0",
 						StuID:        stuID,
 						Result:       result,
-						Data:         "insert into database:" + msg.StuID,
+						Data:         "insert into database:" + msg.StuID + ",error",
 					}
 					return
 				}
-				mission--
+				MissionChannel <- 1
+				log.Info("insert database succeed",
+					zap.String("stuID:", stuID),
+					zap.String("month:", month))
 				return
-			}(msg.StuID, msg.Result)
+			}(msg.StuID, msg.Month, msg.Result)
 
 		case msg := <-ErrChannel: // 错误处理，重新开启 goroutine 和 log
 			if msg.ChannelIndex == "0" {
-				// TODO:log
 				ResChannel <- model.RespMsg{
 					StuID:  msg.StuID,
 					Result: msg.Result,
 				}
-			} else {
+
+				// log
+				log.Error("insert database error",
+					zap.String("stuID:", msg.StuID),
+					zap.String("data:", msg.Data))
+				fmt.Println(msg.Result)
+			} else if !errors.Is(errno.ErrNORESULT, msg.Err) {
 				IndChannel <- model.IndexMsg{
 					Month: msg.ChannelIndex,
 					StuID: msg.StuID,
 				}
+
+				// log
+				log.Error("get html error",
+					zap.String("stuID:", msg.StuID),
+					zap.String("month:", msg.ChannelIndex),
+					zap.String("data:", msg.Data))
+			} else {
+				log.Error("get Html is empty",
+					zap.String("StuID:", msg.StuID),
+					zap.String("month:", msg.ChannelIndex),
+					zap.String("data:", msg.Data))
+				MissionChannel <- 1
 			}
+
+		case <-MissionChannel:
+			mission--
+			fmt.Println("mission left:", mission)
 		}
+
 	}
+
+	fmt.Println("All done!")
 }

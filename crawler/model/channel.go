@@ -18,5 +18,6 @@ type IndexMsg struct {
 // RespMsg ResChannel
 type RespMsg struct {
 	StuID  string
+	Month  string
 	Result [][]string
 }
