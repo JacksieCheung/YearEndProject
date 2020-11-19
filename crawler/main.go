@@ -32,5 +32,5 @@ func main() {
 	model.Stu.Init()
 
 	// start service
-	service.Handler()
+	service.Start()
 }

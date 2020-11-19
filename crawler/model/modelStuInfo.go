@@ -11,6 +11,7 @@ type StudentsModel struct {
 	Place      string `gorm:"column:place"`
 }
 
+// TableName return table name
 func (u *StudentsModel) TableName() string {
 	return "students"
 }
@@ -18,4 +19,10 @@ func (u *StudentsModel) TableName() string {
 // Create ... create table
 func (u *StudentsModel) Create() error {
 	return DB.Self.Create(&u).Error
+}
+
+// GetStudentsRecord find record before insert
+func GetStudentsRecord(stuID, date, time string) error {
+	d := DB.Self.Table("students").Where("stu_id=? AND date=? AND time=?", stuID, date, time).First(&StudentsModel{})
+	return d.Error
 }
