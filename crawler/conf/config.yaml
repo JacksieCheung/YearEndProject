@@ -1,6 +1,14 @@
 local_name: crawler # 本地服务名
 db:  # DB 配置 部署时环境变量覆盖
-  name: stu2020
-  addr: 0.0.0.0:3306
+  name:
+  addr:
   username: # 拉到本地自己设置，不要推上github
-  password: 
+  password:
+web:
+  url: # 这个 url 问学长
+  cookie: # 通过 charles 获取
+  content_type: application/x-www-form-urlencoded
+stu:
+  year: # 自己写
+  stu_id_max: # 从上一年的表获取
+  stu_id_min:
