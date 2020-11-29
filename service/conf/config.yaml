@@ -1,0 +1,6 @@
+local_name: DATA # 本地服务名
+db:  # DB 配置 部署时环境变量覆盖
+  name:
+  addr:
+  username: # 拉到本地自己设置，不要推上github
+  password:

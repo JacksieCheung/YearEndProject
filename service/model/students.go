@@ -2,7 +2,7 @@ package model
 
 // StudentsModel main table
 type StudentsModel struct {
-	// ID         uint32 `gorm:"column:id"`
+	ID         uint32 `gorm:"column:id"`
 	StuID      string `gorm:"column:stu_id"`
 	Date       string `gorm:"column:date"`
 	Time       string `gorm:"column:time"`
@@ -16,13 +16,11 @@ func (u *StudentsModel) TableName() string {
 	return "students"
 }
 
-// Create ... create table
-func (u *StudentsModel) Create() error {
-	return DB.Self.Create(&u).Error
-}
-
-// GetStudentsRecord find record before insert
-func GetStudentsRecord(stuID, date, time string) error {
-	d := DB.Self.Table("students").Where("stu_id=? AND date=? AND time=?", stuID, date, time).First(&StudentsModel{})
-	return d.Error
+// GetStudentList 获得信息列表
+func GetStudentList(id uint32) ([]*StudentsModel, error) {
+	students := make([]*StudentsModel, 0)
+	if err := DB.Self.Where("stu_id=?", id).Scan(students).Error; err != nil {
+		return nil, err
+	}
+	return students, nil
 }

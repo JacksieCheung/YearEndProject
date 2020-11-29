@@ -5,6 +5,7 @@ import (
 	// "io/ioutil"
 
 	"YearEndProject/crawler/config"
+	"YearEndProject/crawler/log"
 	"YearEndProject/crawler/model"
 	"YearEndProject/crawler/service"
 
@@ -14,6 +15,8 @@ import (
 
 func main() {
 	var err error
+
+	defer log.SyncLogger()
 
 	// init config
 	err = config.Init("./conf/config.yaml", "CRAWLER")
