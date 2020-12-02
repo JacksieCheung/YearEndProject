@@ -1,0 +1,12 @@
+{"level":"info","time":"2020-12-01T23:36:37.786+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"info","time":"2020-12-01T23:39:11.574+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"error","time":"2020-12-01T23:39:11.575+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:84","msg":"Database error.","serviceName":"crawler","cause":"Error 1103: Incorrect table name ''","source":"/home/jacksie/YearEndProject/service/handler/data.go:25"}
+{"level":"info","time":"2020-12-01T23:41:20.839+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"info","time":"2020-12-01T23:51:37.887+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"info","time":"2020-12-02T19:53:59.400+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"info","time":"2020-12-02T20:30:53.320+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"info","time":"2020-12-02T21:13:11.695+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"info","time":"2020-12-02T21:20:54.561+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"info","time":"2020-12-02T21:21:49.523+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"info","time":"2020-12-02T23:43:15.619+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"crawler"}
+{"level":"info","time":"2020-12-02T23:43:15.623+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"crawler"}
