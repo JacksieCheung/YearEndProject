@@ -26,6 +26,11 @@ func Start() {
 	IndChannel := make(chan model.IndexMsg, len(months)*2) // 结果管道， crawler 专用，用于开启 crawler 迭代
 	MissionChannel := make(chan int, len(months))          // mission-- 管道
 
+	defer close(ErrChannel)
+	defer close(ResChannel)
+	defer close(IndChannel)
+	defer close(MissionChannel)
+
 	fmt.Println("missions: ", mission, " start")
 	// goroutine init
 	for _, v := range months {

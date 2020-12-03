@@ -5,7 +5,7 @@ import (
 	"YearEndProject/service/model"
 	"YearEndProject/service/pkg/auth"
 	"YearEndProject/service/pkg/errno"
-	"fmt"
+	"encoding/base64"
 	"net/http"
 	"strconv"
 
@@ -29,8 +29,14 @@ func AuthMiddleware(c *gin.Context) {
 		return
 	}
 
-	fmt.Println(req)
-	if err := auth.MakeAccountRequest(req.Id, req.Password, params, &client); err != nil {
+	decodePassword, err := base64.StdEncoding.DecodeString(req.Password)
+	if err != nil {
+		handler.SendError(c, errno.ErrDecoding, nil, err.Error(), "")
+		c.Abort()
+		return
+	}
+
+	if err := auth.MakeAccountRequest(req.Id, string(decodePassword), params, &client); err != nil {
 		handler.SendResponse(c, errno.ErrAuthFailed, err.Error())
 		c.Abort()
 		return

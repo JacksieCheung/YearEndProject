@@ -5,8 +5,8 @@ import (
 )
 
 type Request struct {
-	Id       string `json:"id"`
-	Password string `json:"password"`
+	Id       string `json:"id" binding:"required"`
+	Password string `json:"password" binding:"required"`
 }
 
 type FirstItem struct {

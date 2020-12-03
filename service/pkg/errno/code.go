@@ -13,5 +13,6 @@ var (
 	ErrAuthFailed = &Errno{Code: 30001, Message: "Wrong number or password"}
 	ErrAuthParam  = &Errno{Code: 30002, Message: "Create param failed."}
 
-	ErrAtoi = &Errno{Code: 40001, Message: "Atoi error."}
+	ErrAtoi     = &Errno{Code: 40001, Message: "Atoi error."}
+	ErrDecoding = &Errno{Code: 40002, Message: "Base64 decoding error."}
 )

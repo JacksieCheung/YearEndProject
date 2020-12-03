@@ -33,7 +33,6 @@ func main() {
 	defer model.DB.Close()
 
 	model.FifthInfo.InitFifthPage()
-	fmt.Println(model.FifthInfo)
 
 	g := gin.New()
 

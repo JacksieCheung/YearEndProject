@@ -40,6 +40,11 @@ func Data(c *gin.Context) {
 	thirdChannel := make(chan *model.ThirdItem, 1)
 	fourthChannel := make(chan *model.FourthItem, 1)
 
+	defer close(firstChannel)
+	defer close(secondChannel)
+	defer close(thirdChannel)
+	defer close(fourthChannel)
+
 	go goGetFirstPage(firstChannel, students)
 	go goGetSecondPage(secondChannel, students)
 	go goGetThirdPage(thirdChannel, students, strconv.Itoa(id))
