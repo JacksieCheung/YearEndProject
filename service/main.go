@@ -32,6 +32,9 @@ func main() {
 	model.DB.Init()
 	defer model.DB.Close()
 
+	model.FifthInfo.InitFifthPage()
+	fmt.Println(model.FifthInfo)
+
 	g := gin.New()
 
 	router.Load(

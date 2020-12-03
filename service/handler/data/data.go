@@ -27,11 +27,11 @@ func Data(c *gin.Context) {
 	}
 
 	page := &model.Response{
-		FifthCostMax:         "",
-		FifthEarlyDate:       "",
-		FifthEarlyRestaurant: "",
-		FifthEarlyPlace:      "",
-		FifthWellRestaurant:  "",
+		FifthCostMax:         model.FifthInfo.CostMax,
+		FifthEarlyDate:       model.FifthInfo.EarlyDate,
+		FifthEarlyRestaurant: model.FifthInfo.EarlyRestaurant,
+		FifthEarlyPlace:      model.FifthInfo.EarlyPlace,
+		FifthWellRestaurant:  model.FifthInfo.WellRestaruant,
 	}
 
 	// 并发信息

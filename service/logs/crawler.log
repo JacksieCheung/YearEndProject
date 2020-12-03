@@ -224,3 +224,25 @@
 {"level":"info","time":"2020-12-03T15:32:48.335+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
 {"level":"info","time":"2020-12-03T15:32:48.352+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
 {"level":"info","time":"2020-12-03T15:32:48.353+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"38.439053ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:31:44.063+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:31:44.064+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:31:47.709+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:33:01.377+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:33:01.378+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:33:05.321+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:35:09.305+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:35:09.306+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:35:38.214+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:35:38.214+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:36:47.612+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:36:47.613+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:36:53.429+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:36:53.430+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:36:56.232+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:36:56.251+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:36:56.251+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"96.383042ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:38:24.072+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:38:24.073+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:38:26.783+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:38:26.787+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-03T16:38:26.787+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"78.205725ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}

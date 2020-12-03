@@ -1,5 +1,9 @@
 package model
 
+import (
+	"github.com/spf13/viper"
+)
+
 type Request struct {
 	Id       string `json:"id"`
 	Password string `json:"password"`
@@ -65,7 +69,26 @@ type Response struct {
 	FifthEarlyDate       string `json:"fifth_early_date"`
 	FifthEarlyRestaurant string `json:"fifth_early_restaurant"`
 	FifthEarlyPlace      string `json:"fifth_early_place"`
-	FifthPercent         string `json:"fifth_percent"`
 	FifthWellRestaurant  string `json:"fifth_well_retaurant"`
 	FifthStatus          string `json:"fifth_status"`
+}
+
+type FifthItem struct {
+	CostMax         string
+	EarlyDate       string
+	EarlyRestaurant string
+	EarlyPlace      string
+	WellRestaruant  string
+}
+
+var FifthInfo *FifthItem
+
+func (fifthInfo *FifthItem) InitFifthPage() {
+	FifthInfo = &FifthItem{
+		CostMax:         viper.GetString("fifth.cost_max"),
+		EarlyDate:       viper.GetString("fifth.early_date"),
+		EarlyRestaurant: viper.GetString("fifth.early_restaurant"),
+		EarlyPlace:      viper.GetString("fifth.early_place"),
+		WellRestaruant:  viper.GetString("fifth.well_restaurant"),
+	}
 }
