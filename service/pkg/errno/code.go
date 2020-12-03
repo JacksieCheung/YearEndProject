@@ -9,4 +9,9 @@ var (
 	ErrPathParam        = &Errno{Code: 10004, Message: "Error occurred while getting path param."}
 
 	ErrDatabase = &Errno{Code: 20002, Message: "Database error."}
+
+	ErrAuthFailed = &Errno{Code: 30001, Message: "Wrong number or password"}
+	ErrAuthParam  = &Errno{Code: 30002, Message: "Create param failed."}
+
+	ErrAtoi = &Errno{Code: 40001, Message: "Atoi error."}
 )

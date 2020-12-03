@@ -1,8 +1,14 @@
 package model
 
+type Request struct {
+	Id       string `json:"id"`
+	Password string `json:"password"`
+}
+
 type FirstItem struct {
 	CostCount int
 	CostSum   float64
+	Status    string
 }
 
 type SecondItem struct {
@@ -11,11 +17,14 @@ type SecondItem struct {
 }
 
 type ThirdItem struct {
-	Date       string
-	Time       string
-	Restaurant string
-	Place      string
-	Percent    float64
+	Date          string
+	Time          string
+	Restaurant    string
+	Place         string
+	Percent       int
+	TimeStatus    string
+	PercentStatus string
+	FifthStatus   string
 }
 
 type FourthInfo struct {
@@ -35,24 +44,28 @@ type FourthItem struct {
 	CostCount  int
 }
 
-type Page struct {
-	FirstCostCount       string
-	FirstCostSum         string
-	SecondRestaurant     string
-	SecondPlace          string
-	ThirdDate            string
-	ThirdTime            string
-	ThirdRestaurant      string
-	ThirdPlace           string
-	ThirdPercent         string
-	FourthRestaurant     string
-	FourthPlace          string
-	FourthCostSum        string
-	FourthCostCount      string
-	FifthCostMax         string
-	FifthEarlyDate       string
-	FifthEarlyRestaurant string
-	FifthEarlyPlace      string
-	FifthPercent         string
-	FifthWellRestaurant  string
+type Response struct {
+	FirstCostCount       string `json:"first_cost_count"`
+	FirstCostSum         string `json:"first_cost_sum"`
+	FirstStatus          string `json:"first_status"`
+	SecondRestaurant     string `json:"second_restaurant"`
+	SecondPlace          string `json:"second_place"`
+	ThirdDate            string `json:"third_date"`
+	ThirdTime            string `json:"third_time"`
+	ThirdRestaurant      string `json:"third_restaurant"`
+	ThirdPlace           string `json:"third_place"`
+	ThirdPercent         string `json:"third_percent"`
+	ThirdTimeStatus      string `json:"third_time_status"`
+	ThirdPercentStatus   string `json:"third_percent_status"`
+	FourthRestaurant     string `json:"fourth_restaurant"`
+	FourthPlace          string `json:"fourth_place"`
+	FourthCostSum        string `json:"fourth_cost_sum"`
+	FourthCostCount      string `json:"fourth_cost_count"`
+	FifthCostMax         string `json:"fifth_cost_max"`
+	FifthEarlyDate       string `json:"fifth_early_date"`
+	FifthEarlyRestaurant string `json:"fifth_early_restaurant"`
+	FifthEarlyPlace      string `json:"fifth_early_place"`
+	FifthPercent         string `json:"fifth_percent"`
+	FifthWellRestaurant  string `json:"fifth_well_retaurant"`
+	FifthStatus          string `json:"fifth_status"`
 }
