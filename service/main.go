@@ -23,7 +23,7 @@ func main() {
 	defer log.SyncLogger()
 
 	// init config
-	err = config.Init("./conf/config.yaml", "data")
+	err = config.Init("./service/conf/config.yaml", "data")
 	if err != nil {
 		panic(err)
 	}
