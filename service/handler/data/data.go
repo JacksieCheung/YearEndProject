@@ -24,6 +24,7 @@ func Data(c *gin.Context) {
 	students, err := model.GetStudentList(uint32(id))
 	if err != nil {
 		SendBadRequest(c, errno.ErrDatabase, nil, err.Error(), GetLine())
+		return
 	}
 
 	page := &model.Response{

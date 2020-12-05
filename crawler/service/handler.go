@@ -14,7 +14,7 @@ import (
 // Start concurrency handler
 func Start() {
 	// config init
-	months := []string{"1", "8", "9", "10", "11"}
+	months := []string{"9", "10", "11"}
 
 	stuIDEnd, _ := strconv.Atoi(model.Stu.StuIDMax)
 	stuIDStart, _ := strconv.Atoi(model.Stu.StuIDMin)

@@ -265,3 +265,144 @@
 {"level":"info","time":"2020-12-03T17:21:17.968+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
 {"level":"info","time":"2020-12-03T17:21:17.975+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
 {"level":"info","time":"2020-12-03T17:21:17.975+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"105.6967ms    | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-03T22:58:46.193+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T22:58:46.193+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"listen tcp :8899: bind: address already in use","serviceName":"server"}
+{"level":"info","time":"2020-12-03T22:59:05.984+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T22:59:05.985+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"listen tcp :8899: bind: address already in use","serviceName":"server"}
+{"level":"info","time":"2020-12-03T22:59:20.759+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-03T22:59:20.760+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:09:47.226+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:09:47.226+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Waiting for the router, retry in 1 second.","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:09:48.228+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:09:56.461+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:09:56.477+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:09:56.479+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"101.816475ms  | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:07.011+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:07.022+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:07.022+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"36.012516ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:08.257+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:08.265+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:08.265+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"33.015174ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:09.105+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:09.110+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:09.110+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"38.195255ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:10.034+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:10.038+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:10.038+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"23.58144ms    | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:11.924+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:11.930+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:11.930+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"27.660636ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:12.770+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:12.776+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-04T21:10:12.776+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"26.855015ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:22.272+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Start to listening the incoming requests on http address: :8899","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:22.273+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"Waiting for the router, retry in 1 second.","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:23.275+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"The router has been deployed successfully.","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:43.979+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:43.989+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:43.989+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"134.589771ms  | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:48.458+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:48.463+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:48.463+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"37.334869ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:50.104+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:50.121+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:50.121+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"275.640442ms  | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:51.107+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:51.111+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:51.111+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"49.912874ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:52.228+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:52.243+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:52.243+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"47.825963ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:53.551+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:53.555+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:53.555+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"38.502783ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:54.918+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:54.924+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:54.924+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"45.219083ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:55.976+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:55.980+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:55.981+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"45.785464ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:57.122+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:57.138+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:57.138+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"136.460483ms  | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:58.130+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:58.146+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:58.147+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"46.015627ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:59.152+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:59.166+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:39:59.167+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"48.357481ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:00.244+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:00.248+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:00.248+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"43.961044ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:01.323+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:01.340+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:01.341+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"113.953381ms  | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:02.905+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:02.920+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:02.921+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"592.033222ms  | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:04.134+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:04.150+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:04.150+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"96.533347ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:05.175+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:05.192+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:05.192+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"63.611371ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:06.296+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:06.313+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:06.313+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"80.373626ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:07.381+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:07.384+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:07.384+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"36.931969ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:08.604+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:08.621+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:08.622+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"75.438599ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:09.627+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:09.646+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:09.646+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"61.93925ms    | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:10.624+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:10.627+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:10.627+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"53.292611ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:11.670+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:11.690+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:11.690+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"83.717077ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:12.546+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:12.557+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:12.558+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"56.25499ms    | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:13.398+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:13.415+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:13.415+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"47.29051ms    | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:14.533+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:14.554+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:14.554+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"282.941526ms  | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:15.488+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:15.505+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:15.506+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"51.060991ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:16.409+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:16.414+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:16.415+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"42.125455ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:17.357+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:17.361+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:17.361+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"36.133236ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:18.189+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:18.193+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:18.193+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"38.154172ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:19.109+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:19.120+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:19.120+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"40.625879ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:19.977+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:19.984+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:19.984+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"69.77253ms    | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:20.994+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:21.011+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:21.012+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"272.810925ms  | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:21.907+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:21.911+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:21.912+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"44.490819ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:22.716+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:22.724+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:22.724+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"35.045644ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:23.541+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:23.546+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:23.546+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"37.71084ms    | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:24.366+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"api server function called","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:24.370+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"OK","serviceName":"server"}
+{"level":"info","time":"2020-12-05T10:40:24.370+0800","linenum":"/home/jacksie/YearEndProject/service/log/log.go:69","msg":"33.429983ms   | ::1          | GET /api/v1/data | {code: 0, message: OK}","serviceName":"server"}
