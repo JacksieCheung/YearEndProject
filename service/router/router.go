@@ -26,7 +26,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	dataRouter := g.Group("api/v1/data")
 	dataRouter.Use(middleware.AuthMiddleware)
 	{
-		dataRouter.GET("", data.Data)
+		dataRouter.POST("", data.Data)
 	}
 
 	// The health check handlers.
