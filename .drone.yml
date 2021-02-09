@@ -12,9 +12,6 @@ clone:
 steps:
   - name: build-and-push-image # 构建 golang 镜像
     image: plugins/docker
-    when:
-      ref:
-      - refs/tags/release-yearendproject-*
     volumes:
       - name: dockersock # 挂载下面定义的Volumn
         path: /var/run/docker.sock # 与宿主机用同一docker
