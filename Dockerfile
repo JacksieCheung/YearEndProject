@@ -5,4 +5,4 @@ ADD . $GOPATH/src/github.com/JacksieCheung/YearEndProject
 WORKDIR $GOPATH/src/github.com/JacksieCheung/YearEndProject
 RUN make
 EXPOSE 8899
-CMD ["./main", "-c", "service/conf/config.yaml"]
+CMD ["./main", "-c", "conf/config.yaml"]
