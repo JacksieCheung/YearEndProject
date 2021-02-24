@@ -228,16 +228,16 @@ func getThirdPage(id string, students []*model.StudentsModel) *model.ThirdItem {
 	}
 
 	if thirdItem.Percent >= 80 {
-		thirdItem.PercentStatus = "早起冠军就是你，做最勤奋的学习人！"
+		thirdItem.PercentStatus = "早起冠军就是你\n，做最勤奋的学习人！"
 		thirdItem.FifthStatus = "早起模范标兵"
 	} else if thirdItem.Percent >= 60 {
-		thirdItem.PercentStatus = "早起优等生，请继续保持！"
+		thirdItem.PercentStatus = "早起优等生\n，请继续保持！"
 		thirdItem.FifthStatus = "追逐太阳的学习人"
 	} else if thirdItem.Percent >= 40 {
-		thirdItem.PercentStatus = "努努力，早起及格线就在眼前！"
+		thirdItem.PercentStatus = "努努力，\n早起及格线就在眼前！"
 		thirdItem.FifthStatus = "挣扎温饱线的学习人"
 	} else {
-		thirdItem.PercentStatus = "努力早起吧！努力的学习人需要好身体！"
+		thirdItem.PercentStatus = "努力早起吧！\n努力的学习人需要好身体！"
 		thirdItem.FifthStatus = "饿肚子的白日梦想家"
 	}
 
