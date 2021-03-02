@@ -10,9 +10,10 @@ type Request struct {
 }
 
 type FirstItem struct {
-	CostCount int
-	CostSum   float64
-	Status    string
+	CostCount    int
+	CostSum      float64
+	Status       string
+	FifthCostMax float64
 }
 
 type SecondItem struct {

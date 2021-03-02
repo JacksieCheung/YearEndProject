@@ -27,13 +27,15 @@ func Data(c *gin.Context) {
 		return
 	}
 
-	page := &model.Response{
+	page := &model.Response{}
+
+	/*page := &model.Response{
 		FifthCostMax:         model.FifthInfo.CostMax,
 		FifthEarlyDate:       model.FifthInfo.EarlyDate,
 		FifthEarlyRestaurant: model.FifthInfo.EarlyRestaurant,
 		FifthEarlyPlace:      model.FifthInfo.EarlyPlace,
 		FifthWellRestaurant:  model.FifthInfo.WellRestaruant,
-	}
+	}*/
 
 	// 并发信息
 	firstChannel := make(chan *model.FirstItem, 1)
@@ -60,6 +62,7 @@ func Data(c *gin.Context) {
 			page.FirstCostCount = strconv.Itoa(item.CostCount)
 			page.FirstCostSum = strconv.FormatFloat(item.CostSum, 'f', 2, 64)
 			page.FirstStatus = item.Status
+			page.FifthCostMax = strconv.FormatFloat(item.FifthCostMax, 'f', 2, 64)
 			mission--
 
 		case item := <-secondChannel:
@@ -76,6 +79,9 @@ func Data(c *gin.Context) {
 			page.ThirdTimeStatus = item.TimeStatus
 			page.ThirdPercentStatus = item.PercentStatus
 			page.FifthStatus = item.FifthStatus
+			page.FifthEarlyDate = item.Date
+			page.FifthEarlyPlace = item.Place
+			page.FifthEarlyRestaurant = item.Restaurant
 			mission--
 
 		case item := <-fourthChannel:
@@ -83,6 +89,7 @@ func Data(c *gin.Context) {
 			page.FourthCostSum = strconv.FormatFloat(item.CostSum, 'f', 2, 64)
 			page.FourthPlace = item.Place
 			page.FourthRestaurant = item.Restaurant
+			page.FifthEarlyRestaurant = item.Restaurant
 			mission--
 
 		}
@@ -116,11 +123,17 @@ func goGetFourthPage(fourthChannel chan<- *model.FourthItem,
 	fourthChannel <- fourthItem
 }
 
+// getFirstPage ... 比较维护最大的一次消费记录
 func getFirstPage(students []*model.StudentsModel) *model.FirstItem {
 	// first
 	firstItem := &model.FirstItem{}
 
 	for _, v := range students {
+		// 维护最大消费记录
+		if v.Cost > firstItem.FifthCostMax {
+			firstItem.FifthCostMax = v.Cost
+		}
+
 		// first
 		firstItem.CostCount++
 		firstItem.CostSum += v.Cost
