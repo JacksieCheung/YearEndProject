@@ -89,7 +89,7 @@ func Data(c *gin.Context) {
 			page.FourthCostSum = strconv.FormatFloat(item.CostSum, 'f', 2, 64)
 			page.FourthPlace = item.Place
 			page.FourthRestaurant = item.Restaurant
-			page.FifthEarlyRestaurant = item.Restaurant
+			page.FifthWellRestaurant = item.Restaurant
 			mission--
 
 		}
